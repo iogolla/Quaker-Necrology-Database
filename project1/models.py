@@ -2,6 +2,7 @@
 from django.db import models
 
 
+
 #@python_2_unicode_compatible
 class Post(models.Model):
     title = models.CharField(max_length=200)
@@ -11,4 +12,12 @@ class Post(models.Model):
 
 def __self__(self):
     return self.title
+
+class Person(models.Model):
+  lastname = models.CharField(max_length=100)
+  firstname = models.CharField(max_length=100)
+  class Meta:
+          ordering = ('lastname',) # helps in alphabetical listing. Sould be a tuple
+  def __str__(self):
+    return self.lastname
     
