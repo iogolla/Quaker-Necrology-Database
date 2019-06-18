@@ -1,0 +1,34 @@
+TiFFEN
+Gray
+Scale
+I he l ITTen Company, 200
+Y M
+R G B
+A 1 2 34 5 6 M 8 9 10 11 12 13 14 15 B 17 18 19
+Inches
+2
+4
+8
+2
+Centimetres
+10
+12
+13
+5
+6
+14
+16
+17
+18
+19
+15
+TIFFEN Color Control Patches
+© The Tiffen Company, 2007
+Blue
+Green
+Yellow
+Cyan
+3/Color
+Red
+Magenta White
+Black

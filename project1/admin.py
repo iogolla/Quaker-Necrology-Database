@@ -4,5 +4,5 @@ from import_export.admin import ImportExportModelAdmin
 from .models import Person
 
 @admin.register(Person)
-class ViewAdmin(admin.ModelAdmin):
-	pass
+class ViewAdmin(ImportExportModelAdmin):
+	exclude = ('id', )

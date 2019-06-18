@@ -6,8 +6,8 @@
   <div class="add_buttons">
 
     <div class="button-group">
-      <a href="{% url 'display_quaker' %}" class="btn btn-primary btn-md btn-trim" role="button"> Person</a>
-      <a href="#" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
+      <a href="{% url 'display_quaker' %}" class="btn btn-primary btn-md btn-trim" role="button"> Quakers</a>
+      <a href="{% url 'add_person' %}" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
 
       
     </div>
@@ -35,7 +35,7 @@
 
 	  <tr>
 	    <td>{{ quaker.pk }} <!---primary key will be automatically added by django models--->
-	    <td>{{ quaker.lastnmae }}</td>
+	    <td>{{ quaker.lastname }}</td>
 	    <td>{{ quaker.firstname }}</td>
 	  </tr>
 

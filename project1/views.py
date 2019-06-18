@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import * #import all
+from .forms import *
 
 
 def index(request):
@@ -9,8 +10,12 @@ def display_quaker(request):
 	quakers = Person.objects.all()
 	context = {
 		'quakers' : quakers,
-		#'header' : Quakers,
+		'header' : Person,
 	}
+	queryset_list = Person.objects.all()
+	query = request.GET.get("q")
+	if query:
+		queryset_list = queryset_list.filter(lastname__icontains=query)
 
 	return render(request, 'index.html', context)
 
