@@ -6,7 +6,7 @@
   <div class="add_buttons">
 
     <div class="button-group">
-      <a href="#" class="btn btn-primary btn-md btn-trim" role="button"> Person</a>
+      <a href="{% url 'display_quaker' %}" class="btn btn-primary btn-md btn-trim" role="button"> Person</a>
       <a href="#" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
 
       
@@ -28,8 +28,18 @@
       </tr>
     </thead>
 
+    <!---display in the template body--->
     <tbody>
+	  
+	  {% for quaker in quakers %} <!---treat quakers as list--->
 
+	  <tr>
+	    <td>{{ quaker.pk }} <!---primary key will be automatically added by django models--->
+	    <td>{{ quaker.lastnmae }}</td>
+	    <td>{{ quaker.firstname }}</td>
+	  </tr>
+
+	  {% endfor %}
       
     </tbody>
   </table>
