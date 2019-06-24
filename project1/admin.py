@@ -5,4 +5,10 @@ from .models import Person
 
 @admin.register(Person)
 class ViewAdmin(ImportExportModelAdmin):
-	exclude = ('id', )
+	pass
+
+# class PersonModelAdmin(admin.ModelAdmin):
+# 	search_fields = ["lastname", "firstname"]
+# 	class Meta:
+# 		model = Person
+

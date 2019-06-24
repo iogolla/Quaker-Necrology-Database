@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Quaker Necrology</h1>
+<div class="row">
+{% for quaker in quakers %}
+    <div class="col-md-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ quaker.middlename }}</h5>
+                <p class="card-text">{{ quaker.publication_name }}</p>
+                <a href="{% url 'quaker_detail' quaker.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

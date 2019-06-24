@@ -6,27 +6,34 @@ from .forms import *
 def index(request):
 	return render(request, 'index.html')
 
-def display_quaker(request):
+#an index view that shows a snippet of information about each quaker
+def quaker_index(request):
 	quakers = Person.objects.all()
 	context = {
 		'quakers' : quakers,
-		'header' : Person,
 	}
-	queryset_list = Person.objects.all()
-	query = request.GET.get("q")
-	if query:
-		queryset_list = queryset_list.filter(lastname__icontains=query)
 
-	return render(request, 'index.html', context)
+	return render(request, 'quaker_index.html', context)
 
-def add_person(request):
-	if request.method == "POST":
-		form = PersonForm(request.POST)
+#a detail view that shows more information on a particular quaker
+def quaker_detail(request, pk):
+	quaker = Person.objects.get(pk=pk)
+	context = {
+		'quaker' : quaker,
+	}
 
-		if form.is_valid():
-			form.save()
-			return redirect('index')
+	return render(request, 'quaker_detail.html', context)
 
-	else:
-		form = PersonForm()
-		return render(request, 'add_new.html', {'form': form})
+
+
+# def add_person(request):
+# 	if request.method == "POST":
+# 		form = PersonForm(request.POST)
+
+# 		if form.is_valid():
+# 			form.save()
+# 			return redirect('index')
+
+# 	else:
+# 		form = PersonForm()
+# 		return render(request, 'add_new.html', {'form': form})

@@ -1,10 +1,11 @@
-from django.conf.urls import url
-from .views import *
+from django.urls import path
+from .import views
 
 
 urlpatterns = [
-    url(r'^$', index, name='index'),
-    url(r'^display_quaker$', display_quaker, name='display_quaker'),
-    url(r'^add_person$', add_person, name='add_person')
+    path("", views.quaker_index, name='quaker_index'),
+    path("<int:pk>/", views.quaker_detail, name='quaker_detail'),
+    
+
 ]
 
