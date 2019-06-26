@@ -25,3 +25,11 @@ class Person(models.Model):
 
 	#def __str__(self):
 	#	return self.lastname
+
+class Comment(models.Model):
+    author = models.CharField(max_length=60)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True, null=True)
+    #if a person is deleted then we don't want the comments
+    #related to the person hanging around
+    quaker = models.ForeignKey('Person', on_delete=models.CASCADE)

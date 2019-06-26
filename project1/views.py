@@ -18,22 +18,39 @@ def quaker_index(request):
 #a detail view that shows more information on a particular quaker
 def quaker_detail(request, pk):
 	quaker = Person.objects.get(pk=pk)
+	form = CommentForm()
+	if request.method == 'POST':
+		form = CommentForm(request.POST)
+		if form.is_valid():
+			comment = Comment(
+				author=form.cleaned_data["author"],
+				body=form.cleaned_data["body"],
+				quaker=quaker
+				)
+			comment.save()
+	comments = Comment.objects.filter(quaker=quaker)
 	context = {
 		'quaker' : quaker,
+		'comments' : comments,
+		'form' : form,
 	}
 
 	return render(request, 'quaker_detail.html', context)
 
 
+# def contact(request):
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             name = form.cleaned_data['name']
+#             email = form.cleaned_data['email']
+#             category = form.cleaned_data['category']
+#             subject = form.cleaned_data['subject']
+#             body = form.cleaned_data['body']
 
-# def add_person(request):
-# 	if request.method == "POST":
-# 		form = PersonForm(request.POST)
+#     form = ContactForm()
+#     return render(request, 'contact.html',{'form':form})
 
-# 		if form.is_valid():
-# 			form.save()
-# 			return redirect('index')
+# def about(request):
+#     return render(request, 'about.html',{})
 
-# 	else:
-# 		form = PersonForm()
-# 		return render(request, 'add_new.html', {'form': form})
