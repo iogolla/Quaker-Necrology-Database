@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<h1><strong><center>Dictionary of Quaker Biography</center></strong></h1>
+<h1><strong><center>Dictionary of Quaker Necrology</center></strong></h1>
 
 {% include 'header.html' %}
 
@@ -10,15 +10,15 @@
     <div class="col-md-4">
             <div class="card-body">
                 <h5 class="card-title">{{ quaker.middlename }}</h5>
-                <p class="card-text">{{ quaker.publication_name }}</p>
                 <a href="{% url 'quaker_detail' quaker.pk %}"
                    class="btn btn-primary">
-                    Read More
+                    More Details
                 </a>
             </div>
     </div>
     {% endfor %}
 
+<br>
 <div class="pagination">
     <span class="step-links">
         {% if quakers.has_previous %}

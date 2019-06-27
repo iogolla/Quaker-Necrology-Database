@@ -3,16 +3,57 @@
 
 {% block page_content %}
 <h1>{{ quaker.middlename }}</h1>
-<div class="row">
-    <div class="col-md-8"> 
-    </div>
-    <div class="col-md-14">
-        <h5>About the quaker:</h5>
-        <p>{{ quaker.firstname }}</p>
-        <br>
-        <h5>More Information:</h5>
-        <p>{{ quaker.lastname }}</p>
-    </div>
+	<br>
+ 
+	<h5><center><strong>Details of {{quaker.lastname}}</strong></center></h5>
+	<br>
+	<div class="row">
+		<div class="col-sm-4">
+			<h5>First Name:</h5>
+			<p>{{quaker.firstname}}</p>
+			<h5>Middle Name:</h5>
+			<p>"Add details here"</p>
+			<h5>Last Name:</h5>
+			<p>{{quaker.lastname}}</p>
+			<h5>Suffix:</h5>
+			<p>"Add details here"</p>
+			<h5>Birth Date:</h5>
+			<p>"Add details here"</p>
+			<h5>Death Date:</h5>
+			<p>"Add details here"</p>
+		</div>
+		<div class="col-sm-4">
+			<h5>Publisher of Death:</h5>
+			<p>"Add details here"</p>
+			<h5>Publication Volume:</h5>
+			<p>"Add details here"</p>
+			<h5>Publication Month:</h5>
+			<p>"Add details here"</p>
+			<h5>Publication Year:</h5>
+			<p>"Add details here"</p>
+			<h5>Page Number:</h5>
+			<p>"Add details here"</p>
+			<h5>Volume Dump:</h5>
+			<p>"Add details here"</p>
+		</div>
+		<div class="col-sm-4">
+			<h5>Second Publication:</h5>
+			<p>"Add details here"</p>
+			<h5>Second Volume:</h5>
+			<p>"Add details here"</p>
+			<h5>Second Publication Month:</h5>
+			<p>"Add details here"</p>
+			<h5>Second Publication  Year:</h5>
+			<p>"Add details here"</p>
+			<h5>Page Number:</h5>
+			<p>"Add details here"</p>
+			<h5>Volume Dump:</h5>
+			<p>"Add details here"</p>
+		</div>
+			<h5>More Information:</h5>
+			<p>"Add details here"</p>
+		</div>
+	</div>
 <div class="col-md-8 offset-md-2">
 <h3>Leave a comment:</h3>
     <form method="post">

@@ -1,9 +1,9 @@
 from django.contrib import admin
 #from .models import Post
 from import_export.admin import ImportExportModelAdmin
-from .models import Person
+from .models import Person, Comment
 
-@admin.register(Person)
+@admin.register(Person, Comment)
 class ViewAdmin(ImportExportModelAdmin):
 	pass
 
