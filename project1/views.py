@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import * #import all
 from .forms import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def index(request):
@@ -8,7 +9,18 @@ def index(request):
 
 #an index view that shows a snippet of information about each quaker
 def quaker_index(request):
-	quakers = Person.objects.all()
+	quakers_list = Person.objects.all()
+	paginator = Paginator(quakers_list, 9) # Show 25 quakers per page
+
+	page = request.GET.get('page')
+	try:
+		quakers = paginator.page(page)
+	except PageNotAnInteger:
+		quakers = paginator.get_page(1)
+	except EmptyPage:
+		quakers = paginator.page(paginator.num_pages)
+
+
 	context = {
 		'quakers' : quakers,
 	}
@@ -36,6 +48,7 @@ def quaker_detail(request, pk):
 	}
 
 	return render(request, 'quaker_detail.html', context)
+
 
 
 # def contact(request):
