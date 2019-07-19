@@ -6,7 +6,7 @@ from django.forms import ModelForm
 class PersonForm(forms.ModelForm):
     class Meta:
     	model = Person
-    	fields = ('lastname', 'firstname', 'middlename')
+    	fields = ('lastname', 'firstname', 'fullname')
 
 
 class CommentForm(forms.Form):

@@ -51,47 +51,43 @@ def quaker_detail(request, pk):
 	return render(request, 'quaker_detail.html', context)
 
 
-class PersonListJson(BaseDatatableView):
-    # the model you're going to show
-    model = Person
+# class PersonListJson(BaseDatatableView):
+#     # the model you're going to show
+#     model = Person
     
-    # define columns that will be returned
-    # they should be the fields of your model, and you may customize their displaying contents in render_column()
-    # don't worry if your headers are not the same as your field names, you will define the headers in your template
-    columns = ['firstname', 'lastname', 'middlename']
+#     # define columns that will be returned
+#     # they should be the fields of your model, and you may customize their displaying contents in render_column()
+#     # don't worry if your headers are not the same as your field names, you will define the headers in your template
+#     columns = ['firstname', 'lastname', 'middlename']
 
-    # define column names that will be used in sorting 
-    # order is important and should be same as order of columns displayed by datatables
-    # for non sortable columns use empty value like ''
-    order_columns = ['firstname', 'lastname', 'middlename']
+#     # define column names that will be used in sorting 
+#     # order is important and should be same as order of columns displayed by datatables
+#     # for non sortable columns use empty value like ''
+#     order_columns = ['firstname', 'lastname', 'middlename']
 
-    # set max limit of records returned
-    # this is used to protect your site if someone tries to attack your site and make it return huge amount of data
-    max_display_length = 500
+#     # set max limit of records returned
+#     # this is used to protect your site if someone tries to attack your site and make it return huge amount of data
+#     max_display_length = 500
 
-    def render_column(self, row, column):
-        # we want to render 'translation' as a custom column, because 'translation' is defined as a Textfield in Image model,
-        # but here we only want to check the status of translating process.
-        # so, if 'translation' is empty, i.e. no one enters any information in 'translation', we display 'waiting';
-        # otherwise, we display 'processing'.
-        if column == 'lastname':
-            if row.lastname == '':
-                # escape HTML for security reasons
-                return escape('waiting')
-            else:
-                return escape('processing')
-        else:
-            return super(PersonListJson, self).render_column(row, column)
-
-    def filter_queryset(self, qs):
-        # use parameters passed in GET request to filter queryset
+#     def render_column(self, row, column):
+#         # we want to render 'translation' as a custom column, because 'translation' is defined as a Textfield in Image model,
+#         # but here we only want to check the status of translating process.
+#         # so, if 'translation' is empty, i.e. no one enters any information in 'translation', we display 'waiting';
+#         # otherwise, we display 'processing'.
+#         if column == 'middlename':
+#             # escape HTML for security reasons
+#             return escape('{0} {1}'.format(row.firstname, row.lastname))
+#         else:
+#             return super(PersonListJson, self).render_column(row, column)
+#     def filter_queryset(self, qs):
+#         # use parameters passed in GET request to filter queryset
         
-        # here is a simple example
-        search = self.request.GET.get('search[value]', None)
-        if search:
-            q = Q(firstname__icontains=search) | Q(lastname_icontains=search)
-            qs = qs.filter(q)
-        return qs
+#         # here is a simple example
+#         search = self.request.GET.get('search[value]', None)
+#         if search:
+#             q = Q(firstname__icontains=search) | Q(lastname_icontains=search)
+#             qs = qs.filter(q)
+#         return qs
 
 # def contact(request):
 #     if request.method == 'POST':

@@ -4,7 +4,7 @@ from django.db import models
 class Person(models.Model):
 	lastname = models.CharField(max_length=100, blank=False)
 	firstname = models.CharField(max_length=100, blank=False)
-	middlename = models.CharField(max_length=100, null=True)
+	fullname = models.CharField(max_length=100, null=True)
 	# second_last_name = models.CharField(max_length=100, null=True)
 	# suffix = models.CharField(max_length=100, null=True)
 	# birth = models.IntegerField(default=1, blank=True, null=True)
