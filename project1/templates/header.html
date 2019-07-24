@@ -1,11 +1,15 @@
-{% load staticfiles %}
+{% extends "base.html" %}
+{% load static %}
 
+{% block page_content %}
  <header>
-          <div class = "overlay-container">
-            <img src="{% static "img/special_collections.jpg" %}" width="1090" height="450" alt="Header img" />
-                <br>
-                <br>
-                <!-- Page Content -->
+ 	<h1><strong><center>The Quaker Necrology Database</center></strong></h1>
+	  <div class = "overlay-container">
+	    <img src="{% static "img/special_collections.jpg" %}" width="1090" height="450" alt="Header img" />
+	        <br>
+	        <br>
+	  </div>
+  <!-- Page Content -->
   <div class="container">
 
     <h2 class='my-4'>Introduction</h2>
@@ -32,3 +36,4 @@
    </div>
    
  </header>
+ {% endblock page_content %}

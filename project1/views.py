@@ -5,8 +5,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape
 
-def index(request):
-	return render(request, 'index.html')
+def header(request):
+	return render(request, 'header.html')
 
 #an index view that shows a snippet of information about each quaker
 def quaker_index(request):
