@@ -7,6 +7,7 @@ urlpatterns = [
     path("quakers/", views.quaker_index, name='quaker_index'),
     path("<int:pk>/", views.quaker_detail, name='quaker_detail'),
     path("", views.header, name='header'),
+    path("quakers/edit/(?P<pk>\d+)", views.edit_quaker, name='edit_quaker'),
 ]
 
 

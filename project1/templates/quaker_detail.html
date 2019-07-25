@@ -2,53 +2,53 @@
 {% load static %}
 
 {% block page_content %}
-<h1>{{ quaker.lastname }}</h1>
+<h1>{{ quaker.firstlastname }}</h1>
 	<br>
  
-	<h5><center><strong>Details of {{quaker.lastname}}</strong></center></h5>
+	<h5><center><strong>Details of {{quaker.firstlastname}}</strong></center></h5>
 	<br>
 	<div class="row">
 		<div class="col-sm-4">
 			<h5>First Name:</h5>
 			<p>{{quaker.firstname}}</p>
 			<h5>Middle Name:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.middle}}</p>
 			<h5>Last Name:</h5>
 			<p>{{quaker.lastname}}</p>
 			<h5>Suffix:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.suffix}}</p>
 			<h5>Birth Date:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.birth}}</p>
 			<h5>Death Date:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.death}}</p>
 		</div>
 		<div class="col-sm-4">
 			<h5>Publication:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.publication_name}}</p>
 			<h5>Publication Volume:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.volume}}</p>
 			<h5>Publication Month:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.publication_month}}</p>
 			<h5>Publication Year:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.publication_year}}</p>
 			<h5>Page Number:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.page}}</p>
 			<h5>Volume Dump:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.volume_dump}}</p>
 		</div>
 		<div class="col-sm-4">
 			<h5>Second Publication:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.second_publication}}</p>
 			<h5>Second Volume:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.second_volume}}</p>
 			<h5>Second Publication Month:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.second_publication_month}}</p>
 			<h5>Second Publication  Year:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.second_publication_year}}</p>
 			<h5>Page Number:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.second_page}}</p>
 			<h5>Volume Dump:</h5>
-			<p>{{quaker.firstname}}</p>
+			<p>{{quaker.second_volume_dump}}</p>
 		</div>
 	</div>
 	<br>

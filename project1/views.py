@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import * #import all
 from .forms import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -11,7 +11,7 @@ def header(request):
 #an index view that shows a snippet of information about each quaker
 def quaker_index(request):
 	quakers_list = Person.objects.all()
-	paginator = Paginator(quakers_list, 12) # Show 25 quakers per page
+	paginator = Paginator(quakers_list, 20) # Show 25 quakers per page
 
 	page = request.GET.get('page')
 	try:
@@ -49,6 +49,24 @@ def quaker_detail(request, pk):
 	}
 
 	return render(request, 'quaker_detail.html', context)
+
+def edit(request, pk, model, cls):
+    quaker = get_object_or_404(Person, pk=pk)
+
+    if request.method == "POST":
+        form = cls(request.POST, instance=quaker)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = cls(instance=quaker)
+
+        return render(request, 'edit.html', {'form': form})
+
+
+
+def edit_quaker(request, pk):
+    return edit(request, pk, Person, PersonForm)
 
 
 # class PersonListJson(BaseDatatableView):

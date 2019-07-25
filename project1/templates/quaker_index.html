@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_content %}
-<h1><strong><center>The Quaker Necrology Database</center></strong></h1>
+<h1><center>List of Quakers to Explore</center></h1>
 
 
 <meta charset="utf-8">
@@ -12,7 +12,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="js/dataTables.bootstrap.min.css" rel="stylesheet" type="text/javascript">
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-4@sm col-3@md">
       <div class="filters-group">
@@ -20,7 +20,7 @@
         <input class="textfield filter__search js-shuffle-33" type="search" id="filters-search-input" />
     </div>
    </div>
-</div>
+</div> -->
 
 <div class="row">
     <div class="col-lg-12">
@@ -28,11 +28,11 @@
             <thead>
     <thead>
       <tr>
-        <th class="text-center">id</th>
-        <th class="text-center">Firstname</th>
-        <th class="text-center">Lastname</th>
-        <th class="text-center">Fullname</th>
-        <th class="text-center">More Information</th>
+        <th>Lastname</th>
+        <th>Fullname</th>
+        <th>Quaker Periodical</th>
+        <th>More Information</th>
+        <th>Make Changes</th>
       </tr>
     </thead>
     <tbody>
@@ -40,12 +40,12 @@
       {% for quaker in quakers %}
 
       <tr>
-        <td>{{ quaker.pk }} </td>
-        <td>{{ quaker.firstname }}</td>
-        <td>{{ quaker.lastname }} </td>
-        <td>{{ quaker.middlename }}</td>
+        <td>{{ quaker.lastname }}</td>
+        <td>{{ quaker.firstlastname }} </td>
+        <td>{{ quaker.publication_name }}</td>
         <td> <a href="{% url 'quaker_detail' quaker.pk %}">
                     View Record </a></td>
+       <td> <a href="{% url 'edit_quaker' quaker.pk %}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" > Edit</a><td>
       </tr>
       {% endfor %}
   </tbody>
