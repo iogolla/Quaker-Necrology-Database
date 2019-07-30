@@ -1,29 +1,10 @@
-#from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
     
-class Person(models.Model):
-	lastname = models.CharField(max_length=100, blank=False)
-	firstname = models.CharField(max_length=100, blank=False)
-	middlename = models.CharField(max_length=100, null=True)
-	second_last_name = models.CharField(max_length=100, null=True)
-	suffix = models.CharField(max_length=100, null=True)
-	firstlastname = models.CharField(max_length=100, null=True)
-	birth = models.CharField(max_length=100, null=True)
-	death = models.CharField(max_length=100, null=True)
-	publication_name =models.TextField(blank=True, null=True)
-	volume = models.CharField(max_length=100, null=True)
-	publication_month = models.CharField(max_length=100, null=True)
-	publication_year = models.CharField(max_length=100, null=True)
-	page = models.CharField(max_length=100, null=True)
-	volume_dump = models.CharField(max_length=100, null=True)
-	second_publication = models.CharField(max_length=100, null=True)
-	second_volume = models.CharField(max_length=100, null=True)
-	second_publication_month = models.CharField(max_length=100, null=True)
-	second_publication_year = models.CharField(max_length=100, null=True)
-	second_page = models.CharField(max_length=100, null=True)
-	second_volume_dump = models.CharField(max_length=100, null=True)
-
-
+class Person(models.Model): 
+	Fullname = models.CharField(max_length=100, null=True)
+	Quaker_Periodical = models.CharField(max_length=100, null=True)
+	Publication_Year = models.CharField(max_length=100, null=True)
+	Volume = models.CharField(max_length=100, null=True)
 	#def __str__(self):
 	#	return self.lastname
 
