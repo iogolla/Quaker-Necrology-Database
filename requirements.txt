@@ -5,8 +5,6 @@ diff-match-patch==20181111
 Django==2.2.3
 django-datatables-view==1.18.0
 django-import-export==1.2.0
-djangorestframework==3.10.1
-djangorestframework-datatables==0.5.0
 et-xmlfile==1.0.1
 jdcal==1.4.1
 odfpy==1.4.0

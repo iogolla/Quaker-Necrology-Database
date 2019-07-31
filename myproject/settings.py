@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project1',
-    'import_export',
-    'rest_framework_datatables' 
+    'import_export', 
 ]
 
 MIDDLEWARE = [

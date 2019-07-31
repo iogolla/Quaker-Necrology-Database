@@ -13,33 +13,8 @@
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script scr="//code.jquery.com/jquery-3.3.1.js"></script>
 
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-4@sm col-3@md">
-      <div class="filters-group">
-        <label for="filters-search-input" class="filter-label">Search</label>
-        <input class="textfield filter__search js-shuffle-33" type="search" id="filters-search-input" />
-    </div>
-   </div>
-</div> -->
-
-<!-- <div class="row">
-    <div class="col-lg-12">
-        <table class="tabla table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-    <thead>
-      <tr>
-        <th>firstlastname</th>
-        <th>publication_name</th>
-        <th>more_information</th>
-      </tr>
-    </thead>
-    
-  </table>
-    
-</table>
-</div> -->
-<table class="tabla">
+<!-- define how you want the headers of the DataTables to display -->
+<table class="table table table-striped ">
     <thead>
         <tr>
             <th>Fullname</th>
@@ -53,7 +28,7 @@
 </table>
 
 
-
+<!-- load the following javascript library files -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
@@ -68,14 +43,14 @@
 
 
   $(document).ready(function() {
-  
-  
+      //all the data from person_json will automatically fill the body part of the table
       // DataTable
-      var table = $('.tabla').DataTable({
+      var table = $('.table').DataTable({
           // ...
           "processing": true,
           "serverSide": true,
           "ajax": "{% url 'person_json' %}",
+
       } );
   
   } );

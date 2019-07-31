@@ -1,49 +1,52 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Quaker Necrology</title>
-  </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 
-  
-  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
-  <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}"/>
-
-  <body>
-
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'index' %}"> Quaker Necrology</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarsExample02">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'quaker_index' %}">Obituary Index <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="mailto:ianelvis6@gmail.com"><i class="fa fa-fw fa-envelope-o"></i>Contact <span class="sr-only">(current)</span></a>
-      </li>
-
-    </ul>
-  </div>
-</nav>
-
+{% load static %}
+<!-- body contents -->
+<body>
+    <!-- the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).Only when the button is clicked, the navigation bar will be displayed. -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="{% url 'index' %}">Quaker Necrology</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'obituary_index' %}">Obituary Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"href="{% url 'feedback_form' %}">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:mzarafon@haverford.edu">Contact</a>
+          </li>    
+        </ul>
+      </div>  
+    </nav>
     <br>
+
+    <!-- page contennts -->
     <div class="container">
 
-{% block page_content %}
-{% endblock page_content %}
+        <!-- we can extend the base template. what happens here is that any HTML inside the page_content gets added inside the same block in base.html-->
+        {% block page_content %}
+        {% endblock page_content %}
 
-{% block footer %}
-{% include "footer.html" %}
-{% endblock %}
+        {% block footer %}
+        {% include "footer.html" %}
+        {% endblock %}
 
+    </div>
 
-</div>
-
-  </body>
+</body>
 </html>

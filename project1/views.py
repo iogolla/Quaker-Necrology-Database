@@ -1,4 +1,5 @@
-""" views.py takes a web request and returns a web response e.g a web page, a redirect..."""
+""" contains functions and classes that handle what data is displayed in the HTML templates.
+views.py takes a web request and returns a web response e.g a web page, a redirect..."""
 
 # (1)render combines a given template with a given context dictionary and 
 #returns a HttpResponse object with that rendered text
@@ -13,70 +14,50 @@ from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape, format_html, mark_safe
 
 
-#function that returns contents of index.html
+#when the function is called, it renders an HTML file called index.html
+#The view function takes one argument, request. This object is an HttpRequestObject that is created
+#whenever a page is loaded. It contains information about the request, such as the method, which can
+#take several values including GET and POST.
 def index(request):
     return render(request, 'index.html')
 
 
-# an index view that shows a snippet of information about each quaker
-def quaker_index(request):
-    quakers_list = Person.objects.all()
-    paginator = Paginator(quakers_list, 20)  # Show 25 quakers per page
-
-    page = request.GET.get('page')
-    try:
-        quakers = paginator.page(page)
-    except PageNotAnInteger:
-        quakers = paginator.get_page(1)
-    except EmptyPage:
-        quakers = paginator.page(paginator.num_pages)
-
+#when the function is called, it renders an HTML file called obituary_index.html
+def obituary_index(request):
+    #perform a query that will retrieve all objects in the Person table
+    quakers = Person.objects.all()
+    #the context dictionary is used to send information to the obituary_index template
+    #the dictionary has one entry (quakers) to which we assign our queryset containing all persons
     context = {
         'quakers': quakers,
     }
 
-    return render(request, 'quaker_index.html', context)
+    return render(request, 'obituary_index.html', context)
 
 
-# a detail view that shows more information on a particular quaker
-def quaker_detail(request, pk):
-    quaker = Person.objects.get(pk=pk)
+# a function that allows users to leave new feedback and see feedback from
+#other users
+#https://realpython.com/get-started-with-django-1/
+def feedback_form(request):
+    #create an instance of our form class
     form = CommentForm()
     if request.method == 'POST':
         form = CommentForm(request.POST)
+        #is_valid() checks whether all the fields have been entered correctly
+        #if a form is valid, a new instance of comment is created
         if form.is_valid():
             comment = Comment(
                 author=form.cleaned_data["author"],
                 body=form.cleaned_data["body"],
-                quaker=quaker
             )
-            comment.save()
-    comments = Comment.objects.filter(quaker=quaker)
+            comment.save() #saving the comment
+    comments = Comment.objects.all()
     context = {
-        'quaker': quaker,
         'comments': comments,
         'form': form,
     }
 
-    return render(request, 'quaker_detail.html', context)
-
-
-def edit(request, pk, model, cls):
-    quaker = get_object_or_404(Person, pk=pk)
-
-    if request.method == "POST":
-        form = cls(request.POST, instance=quaker)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = cls(instance=quaker)
-
-        return render(request, 'edit.html', {'form': form})
-
-
-def edit_quaker(request, pk):
-    return edit(request, pk, Person, PersonForm)
+    return render(request, 'feedback_form.html', context)
 
 
 class PersonJson(BaseDatatableView):
@@ -114,9 +95,8 @@ class PersonJson(BaseDatatableView):
             return super(PersonJson, self).render_column(row, column)
 
     def filter_queryset(self, qs):
-        #         # use parameters passed in GET request to filter queryset
+        # use parameters passed in GET request to filter queryset
 
-        #         # here is a simple example
         search = self.request.GET.get('search[value]', None)
         if search:
             q = Q(Fullname__icontains=search) | Q(Quaker_Periodical__icontains=search)
