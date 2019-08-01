@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Quaker Necrology is a datatbase that collects and displayes the index of death notices and obituaries from Quaker periodicals from 1828 to the present. The database serves as an index and not a complete abstract of the information found in each obituary. It includes the information that we thought was necessary for the purposes of identification. That information includes the fullnames, dates of birth and death, the Quaker periodicals, and the years and volumes of publication. Below are the titles of the periodicals:
+Quaker Necrology is a datatbase that collects and displayes the index of death notices and obituaries from Quaker select periodicals from 1828 to the present. The database serves as an index and not a complete abstract of the information found in each obituary. It includes the information that we thought was necessary for the purposes of identification. That information includes the fullnames, dates of birth and death, the Quaker periodicals, and the years and volumes of publication. Below are the titles of the periodicals:
 
 * The American Friend 1894-1960 (Five Years Meeting – Orthodox)
 * Evangelical Friend 1905-1914, 1929-1994 (Ohio)
