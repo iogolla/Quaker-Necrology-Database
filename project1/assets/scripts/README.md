@@ -21,7 +21,7 @@ on Ubuntu.
 last name, publication, death date, etc. if a csv of the same name/location already exists, just appends new 
 entries to this original file. outputs to a csv folder in the parent directory.
 
-##How this works
+## How this works
 * take .j2ks and run them through pillow or wand script to get them as smaller 
 .pngs (j2ktopng.py scripts)
 * take these .pngs and run them through Google Vision script to get a set of .txts with their 
