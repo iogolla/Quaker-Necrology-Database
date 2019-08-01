@@ -27,7 +27,7 @@ A sample card is shown below:
 Quaker Necrology Database also allows users to send suggestions or comments on matters related to the Quakers enlisted. We welcome anyone with any additional information/suggestions to contact us.
 
 ## Project Components
-### Scripts and Text Files in [this]() folder:
+### Scripts and Text Files in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder:
 
 * **j2ktopng_pillow.py** this is a python function that converts a folder of `j2ks` (JPEG-2000) to `pngs` and dumps them in a folder named after the first but with `pngs` appended, in the parent directory of the `j2k` folder.
 
