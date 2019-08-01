@@ -51,6 +51,6 @@ entries to this original file. outputs to a csv folder in the parent directory.
 
 Questions?🤔 Comments?🤨 Suggestions!😊
 
-Send us an email at(hcdigitalscholarship@gmail.com)
+Send us an email at hcdigitalscholarship@gmail.com
 
 
