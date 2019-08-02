@@ -27,7 +27,17 @@ A sample card is shown below:
 Quaker Necrology Database also allows users to send suggestions or comments on matters related to the Quakers enlisted. We welcome anyone with any additional information/suggestions to contact us.
 
 ## Project Components
-### Scripts and Text Files can be found in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder:
+### Scripts and Text Files can be found in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder.
+
+To get an idea of how the project was approached click [here](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) to get an idea of the issues that most need attention.
+
+A huge part of the project involves datatables and the documentattion can be found [here](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing)
+
+### Frameworks Used
+* Django
+* Python
+* Datatables
+* JS/JQuery
 
 ## Community
 
