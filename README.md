@@ -37,7 +37,7 @@ A huge part of the project involves datatables and the documentattion can be fou
 * Django
 * Python
 * Datatables
-* JS/JQuery
+* JQuery
 
 ## Community
 
