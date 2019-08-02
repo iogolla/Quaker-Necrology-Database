@@ -29,7 +29,7 @@ Quaker Necrology Database also allows users to send suggestions or comments on m
 ## Project Components
 ### Scripts and Text Files can be found in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder.
 
-To get an idea of how the project was approached click [here](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) to get an idea of the issues that most need attention.
+To get an idea of how the project was approached click [here](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts)
 
 A huge part of the project involves datatables and the documentattion can be found [here](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing)
 
