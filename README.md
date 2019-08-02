@@ -24,7 +24,6 @@ A sample card is shown below:
 ![Quaker Necrology](https://github.com/iogolla/quaker-necrology/blob/master/sample%20image.png)
 
 
-Quaker Necrology Database also allows users to send suggestions or comments on matters related to the Quakers enlisted. We welcome anyone with any additional information/suggestions to contact us.
 
 ## Project Components
 ### Scripts and Text Files can be found in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder.
@@ -40,6 +39,7 @@ A huge part of the project involves datatables and the documentattion can be fou
 * JQuery
 
 ## Community
+Quaker Necrology Database also allows users to send suggestions or comments on matters related to the Quakers enlisted. We welcome anyone with any additional information/suggestions to contact us.
 
 Questions?🤔 Comments?🤨 Suggestions!😊
 
