@@ -21,7 +21,7 @@ The record reference detailed above were obtained from a set of cards from the S
 
 A sample card is shown below: 
 
-
+![Quaker Necrology](./sample image.png)
 
 
 Quaker Necrology Database also allows users to send suggestions or comments on matters related to the Quakers enlisted. We welcome anyone with any additional information/suggestions to contact us.
