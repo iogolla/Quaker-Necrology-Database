@@ -28,11 +28,9 @@ A sample card is shown below:
 
 
 ## Project Components
-### Scripts and Text Files can be found in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder.
+### Scripts and Text Files can be found in [this](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts) folder. You are encouraged to go to that folder if you want to get an idea of how the project was approached.
 
-To get an idea of how the project was approached click [here](https://github.com/iogolla/quaker-necrology/tree/master/project1/assets/scripts)
-
-A huge part of the project involves datatables and the documentattion can be found [here](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing)
+A huge part of the project involves datatables and the documentation can be found [here](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing)
 
 ### Frameworks Used
 * Django
