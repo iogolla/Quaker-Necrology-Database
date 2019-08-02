@@ -2,6 +2,8 @@
 # Quaker Necrology Database
 [Link to the project's website]()
 
+![Quaker Necrology](https://github.com/iogolla/quaker-necrology/blob/master/project1/static/img/special_collections.jpg)
+
 ## Introduction
 
 Quaker Necrology is a database that collects and displays the index of death notices and obituaries from Quaker select periodicals from 1828 to the present. The database serves as an index and not a complete abstract of the information found in each obituary. It includes the information that we thought was necessary for the purposes of identification. That information includes the fullnames, dates of birth and death, the Quaker periodicals, and the years and volumes of publication. Below are the titles of the periodicals:
