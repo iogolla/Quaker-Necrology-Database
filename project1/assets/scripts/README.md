@@ -29,4 +29,6 @@ content transcribed (vision_transcription.py)
 * take these .txts and run them through the parsing script to get a .csv of their contents parsed into first name, 
 publication name, etc (parsing.py)
 
+More information can be found in the in-code documentation.
+
 
