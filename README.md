@@ -43,6 +43,6 @@ Quaker Necrology Database also allows users to send suggestions or comments on m
 
 Questions?🤔 Comments?🤨 Suggestions!😊
 
-Send us an email at hcdigitalscholarship@gmail.com
+Contact me at ianelvis6@gmail.com
 
 
