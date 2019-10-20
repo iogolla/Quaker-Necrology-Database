@@ -1,6 +1,5 @@
 #runs Google Vision on a batch of images and prints their output to individual text files. 
 #output .txts go in folder in the parent directory
-#written by James Gisele, james.may.gisele@gmail.com
 
 import base64
 import os
