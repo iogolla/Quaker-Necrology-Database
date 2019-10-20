@@ -32,7 +32,7 @@ A sample card is shown below:
 
 A huge part of the project involves datatables and the documentation can be found [here](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing)
 
-### Frameworks Used
+### Languages and Frameworks Used
 * Django
 * Python
 * Datatables
