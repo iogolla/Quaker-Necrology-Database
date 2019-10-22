@@ -36,7 +36,8 @@ A huge part of the project involves datatables and the documentation can be foun
 * Django
 * Python
 * Datatables
-* JQuery
+* JavaScript
+* HTML/CSS
 
 ## Community
 Quaker Necrology Database also allows users to send suggestions or comments on matters related to the Quakers enlisted. We welcome anyone with any additional information/suggestions to contact us.
